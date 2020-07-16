@@ -34,6 +34,8 @@ import User from './components/User';
 import CounterRenderProps from './components/CounterRenderProps';
 import ContextComponentC from './components/ContextComponentC';
 import { UserProvider } from './components/userContext';
+import PostGet from './components/PostGet';
+import PostForm from './components/PostForm';
 
 class  App extends Component{
 
@@ -88,10 +90,12 @@ class  App extends Component{
           (count,incrementCount) => <HoverCounter2 count={count} incrementCount={incrementCount}/>
         }
         </CounterRenderProps>  */}
-        <UserProvider value='Abhishek'>
+        {/* <UserProvider value='Abhishek'>
           <ContextComponentC/>
-        </UserProvider>
-        <ContextComponentC/>
+        </UserProvider> */}
+        {/* <ContextComponentC/> */}
+        {/* <PostGet/> */}
+        <PostForm/>
       </div>
     );
   }
