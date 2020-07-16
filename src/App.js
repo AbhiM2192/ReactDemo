@@ -26,6 +26,12 @@ import FRParentInput from './components/FRParentInput';
 import PortalDemo from './components/PortalDemo';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ClickCounter2 from './components/ClickCounter2';
+import HoverCounter2 from './components/HoverCounter2';
+import User from './components/User';
+import CounterRenderProps from './components/CounterRenderProps';
 
 class  App extends Component{
 
@@ -60,12 +66,26 @@ class  App extends Component{
         {/* <FocusInput/> */}
         {/* <FRParentInput/> */}
         {/* <PortalDemo/> */}
-        <ErrorBoundary>
+        {/* <ErrorBoundary>
           <Hero heroName='Batman'/>
           <Hero heroName='Superman'/>
           <Hero heroName='Joker'/>
-        </ErrorBoundary>
-        
+        </ErrorBoundary> */}
+        {/* <ClickCounter name='Abhishek'/> */}
+        {/* <HoverCounter/> */}
+        {/* <ClickCounter2/> */}
+        {/* <HoverCounter2/> */}
+        {/* <User render= {(isLoggedIn) => isLoggedIn ? 'Maheshwari' : 'Guest'} /> */}
+        <CounterRenderProps>
+        {
+          (count,incrementCount) => <ClickCounter2 count={count} incrementCount={incrementCount}/>
+        }
+        </CounterRenderProps> 
+        <CounterRenderProps>
+        {
+          (count,incrementCount) => <HoverCounter2 count={count} incrementCount={incrementCount}/>
+        }
+        </CounterRenderProps> 
       </div>
     );
   }
