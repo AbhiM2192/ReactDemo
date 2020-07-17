@@ -36,6 +36,14 @@ import ContextComponentC from './components/ContextComponentC';
 import { UserProvider } from './components/userContext';
 import PostGet from './components/PostGet';
 import PostForm from './components/PostForm';
+import HooksCounter from './components/hooks/HooksCounter';
+import HooksCounter2 from './components/hooks/HooksCounter2';
+import HooksCounter3 from './components/hooks/HooksCounter3';
+import HookCounter4 from './components/hooks/HookCounter4';
+import HookEffect1 from './components/hooks/HookEffect1';
+import HookEffect2 from './components/hooks/HookEffect2';
+import MouseContainer from './components/hooks/MouseContainer';
+import IntervalHookCounter from './components/hooks/IntervalHookCounter';
 
 class  App extends Component{
 
@@ -95,7 +103,15 @@ class  App extends Component{
         </UserProvider> */}
         {/* <ContextComponentC/> */}
         {/* <PostGet/> */}
-        <PostForm/>
+        {/* <PostForm/> */}
+        {/* <HooksCounter/> */}
+        {/* <HooksCounter2/> */}
+        {/* <HooksCounter3/> */}
+        {/* <HookCounter4/> */}
+        {/* <HookEffect1/> */}
+        {/* <HookEffect2/> */}
+        {/* <MouseContainer/> */}
+        <IntervalHookCounter/>
       </div>
     );
   }
