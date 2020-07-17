@@ -44,7 +44,11 @@ import HookEffect1 from './components/hooks/HookEffect1';
 import HookEffect2 from './components/hooks/HookEffect2';
 import MouseContainer from './components/hooks/MouseContainer';
 import IntervalHookCounter from './components/hooks/IntervalHookCounter';
+import DataFetchHook from './components/hooks/DataFetchHook';
+import UserContexthookCompC from './components/hooks/UserContexthookCompC';
 
+export const UserContextHook = React.createContext();
+export const ChannelContextHook = React.createContext();
 class  App extends Component{
 
   
@@ -111,7 +115,14 @@ class  App extends Component{
         {/* <HookEffect1/> */}
         {/* <HookEffect2/> */}
         {/* <MouseContainer/> */}
-        <IntervalHookCounter/>
+        {/* <IntervalHookCounter/> */}
+        {/* <DataFetchHook/> */}
+        <UserContextHook.Provider value={'Abhishek'}>
+          <ChannelContextHook.Provider value={'Biyani'}>
+            <UserContexthookCompC/>
+          </ChannelContextHook.Provider>
+        </UserContextHook.Provider>
+        
       </div>
     );
   }
