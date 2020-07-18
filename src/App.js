@@ -46,6 +46,7 @@ import MouseContainer from './components/hooks/MouseContainer';
 import IntervalHookCounter from './components/hooks/IntervalHookCounter';
 import DataFetchHook from './components/hooks/DataFetchHook';
 import UserContexthookCompC from './components/hooks/UserContexthookCompC';
+import CounterReducerHook1 from './components/hooks/CounterReducerHook1';
 
 export const UserContextHook = React.createContext();
 export const ChannelContextHook = React.createContext();
@@ -117,12 +118,12 @@ class  App extends Component{
         {/* <MouseContainer/> */}
         {/* <IntervalHookCounter/> */}
         {/* <DataFetchHook/> */}
-        <UserContextHook.Provider value={'Abhishek'}>
+        {/* <UserContextHook.Provider value={'Abhishek'}>
           <ChannelContextHook.Provider value={'Biyani'}>
             <UserContexthookCompC/>
           </ChannelContextHook.Provider>
-        </UserContextHook.Provider>
-        
+        </UserContextHook.Provider> */}
+        <CounterReducerHook1/>
       </div>
     );
   }
