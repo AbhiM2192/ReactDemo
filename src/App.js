@@ -47,6 +47,8 @@ import IntervalHookCounter from './components/hooks/IntervalHookCounter';
 import DataFetchHook from './components/hooks/DataFetchHook';
 import UserContexthookCompC from './components/hooks/UserContexthookCompC';
 import CounterReducerHook1 from './components/hooks/CounterReducerHook1';
+import CounterReducerHook2 from './components/hooks/CounterReducerHook2';
+import MultipleReducerHook3 from './components/hooks/MultipleReducerHook3';
 
 export const UserContextHook = React.createContext();
 export const ChannelContextHook = React.createContext();
@@ -123,7 +125,9 @@ class  App extends Component{
             <UserContexthookCompC/>
           </ChannelContextHook.Provider>
         </UserContextHook.Provider> */}
-        <CounterReducerHook1/>
+        {/* <CounterReducerHook1/> */}
+        {/* <CounterReducerHook2/> */}
+        <MultipleReducerHook3/>
       </div>
     );
   }
