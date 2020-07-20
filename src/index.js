@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import _ from 'lodash'
+// import _ from 'lodash'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

@@ -1,7 +1,8 @@
-import React,{useReducer} from 'react'
+import React,{useReducer,useContext} from 'react'
 import _ from 'lodash'
+import List from './List';
 
-
+export const topicContext = React.createContext()
 const InitialState = {
 topic:'react',    
 source:[
@@ -32,24 +33,19 @@ const topicReducer = (state,action) =>{
         case 'topicSelect':
             return {...state,topic:action.value}
         case 'filter':
-            console.log(action.value)
-            const newList = _.filter(state.source,['name',action.value])
+            
+            let newList = _.filter(InitialState.source,['name',action.value])
             return {...state,source:newList}
-        default:
+        case 'reset':
             return InitialState
+        default:
+            return state
     }
 }
-const sourceReducer = (state,action) =>{
-    
-    switch(action.type){
-        
-        default:
-            return InitialState
-    }
-}
-function MultipleReducerHook3() {
+
+function FilterReducerHookParent() {
     const[topic,dispatch] = useReducer(topicReducer,InitialState)
-    const [source,dispatchTwo] = useReducer(sourceReducer,InitialState)
+    
     return (
         <div>
             <select value={topic.topic} onChange={(e) =>dispatch({type:'topicSelect',value:e.target.value})}>
@@ -60,19 +56,11 @@ function MultipleReducerHook3() {
                 <option value='java'>Java</option>
             </select>
             <button onClick={() =>dispatch({type:'filter',value:topic.topic})}>Filter</button>
-            <h2>List of topics with reference</h2>
-            <div>
-                {topic.source.map(s =>{
-                    return(
-                        <div key={s.name}>
-                            <h3>{s.name}</h3>
-                            <p>{s.link}</p>
-                        </div>
-                    )
-                })}
-            </div>
+            <topicContext.Provider value={{topic:topic,dispatchFunc:dispatch}}>
+            <List/>
+            </topicContext.Provider>
         </div>
     )
 }
 
-export default MultipleReducerHook3
+export default FilterReducerHookParent
