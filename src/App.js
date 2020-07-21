@@ -50,6 +50,12 @@ import CounterReducerHook1 from './components/hooks/CounterReducerHook1';
 import CounterReducerHook2 from './components/hooks/CounterReducerHook2';
 import HookReducerandContextCompParent from './components/hooks/HookReducerandContextCompParent';
 import FilterReducerHookParent from './components/hooks/FilterReducerHookParent';
+import DataFetch1 from './components/hooks/DataFetch1';
+import DataFetchReducer from './components/hooks/DataFetchReducer';
+import ParentUseCallback from './components/hooks/ParentUseCallback';
+import CounterUseMemo from './components/hooks/CounterUseMemo';
+import FocusInputUseRef from './components/hooks/FocusInputUseRef';
+import TimerUseRef from './components/hooks/TimerUseRef';
 
 export const UserContextHook = React.createContext();
 export const ChannelContextHook = React.createContext();
@@ -129,7 +135,13 @@ class  App extends Component{
         {/* <CounterReducerHook1/> */}
         {/* <CounterReducerHook2/> */}
         {/* <HookReducerandContextCompParent/> */}
-        <FilterReducerHookParent/>
+        {/* <FilterReducerHookParent/> */}
+        {/* <DataFetch1/> */}
+        {/* <DataFetchReducer/> */}
+        {/* <ParentUseCallback/> */}
+        {/* <CounterUseMemo/> */}
+        {/* <FocusInputUseRef/> */}
+        <TimerUseRef/>
       </div>
     );
   }
